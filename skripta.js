@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
 		.addEventListener('click', dodajBarvo);
 		
 	//Odstrani barve
-	
+
 	//Stroboskop
 	var vrednosti = [];
 	var minCas = 0;
