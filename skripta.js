@@ -5,14 +5,19 @@ window.addEventListener('load', function() {
 	var dodajBarvo = function(event) {
 		var input = document.createElement('button');
         var picker = new jscolor(input);
-        picker.fromRGB(Math.floor(Math.random()*255), Math.floor(Math.random()*255), Math.floor(Math.random()*255))
+        picker.fromRGB(Math.floor(Math.random()*255), Math.floor(Math.random()*255), Math.floor(Math.random()*255));
         document.getElementById("barve").appendChild(input);
+        
 	}
-	
-	document.querySelector("#novaBarva") 
-		.addEventListener('click', dodajBarvo);
+	document.querySelector("#novaBarva").addEventListener('click', dodajBarvo);
 		
 	//Odstrani barve
+	var odstraniBarve = function() {
+		
+		document.getElementById("barve").innerHTML ='';
+	}
+	document.getElementById("odstraniBarve").addEventListener('click', odstraniBarve);
+	
 
 	//Stroboskop
 	var vrednosti = [];
